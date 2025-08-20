@@ -1,21 +1,31 @@
-export const config = {
-  api: {
-    bodyParser: true, // 確保自動 parse JSON
-  },
-};
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Only POST requests allowed' });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { prompt, target, ai, background } = req.body || {};
+  try {
+    const {
+      prompt,
+      target,
+      ai,
+      background,
+      style = '寫實攝影風格，自然光，16:9',
+      expression = '開心微笑',
+      action = '伸手比YA',
+      framing = '低角度魔角自拍'
+    } = req.body || {};
 
-  if (!prompt || !target || !ai || !background) {
-    return res.status(400).json({ error: 'Missing required fields' });
+    const finalPrompt = `
+你是一位專業攝影師，協助客戶「${target}」主題拍攝。
+地點為 ${background}。攝影風格：${style}，構圖：${framing}。
+請為主角 ${ai} 拍攝以下情境：「${prompt}」。
+他表情 ${expression}，動作為 ${action}。
+`;
+
+    return res.status(200).json({ prompt: finalPrompt.trim() });
+  } catch (error) {
+    console.error('Error generating prompt:', error);
+    return res.status(500).json({ error: 'Failed to generate prompt' });
   }
-
-  const result = `在${background}，${ai} 想請梁寧莉一起自拍，主題聚焦於「${target}」，風格關鍵字為：「${prompt}」。`;
-
-  return res.status(200).json({ prompt: result });
 }
+
