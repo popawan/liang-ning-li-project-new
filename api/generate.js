@@ -4,16 +4,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    const {
-      prompt,
-      target,
-      ai,
-      background,
-      style,
-      expression,
-      action,
-      framing
-    } = req.body || {};
+   const {
+  prompt,
+  target,
+  ai,
+  background,
+  style,
+  expression,
+  action,
+  framing
+} = req.body || {};
+
 
     const finalPrompt = `
 你是一位專業攝影師，協助客戶「${target}」主題拍攝。
