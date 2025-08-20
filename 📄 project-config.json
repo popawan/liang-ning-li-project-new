@@ -1,0 +1,26 @@
+{
+  "project_name": "梁寧莉自拍 GPTS 專案",
+  "description": "建立梁寧莉風格自拍互動助手，支援自拍合成、背景生成與角色還原。",
+  "language": "繁體中文",
+  "author": "莊正旺",
+  "modules": {
+    "style_note": "docs/ningli-style-note.yaml",
+    "gpts_profile": "docs/liang-ning-li-gpts.json",
+    "pose_camera_style": "docs/pose_camera_style.json",
+    "image_templates": "templates/image-prompts/",
+    "upload_rules": "rules/upload-constraints.yaml",
+    "voice_config": "optional/voice-config.yaml"
+  },
+  "features": {
+    "enable_photo_upload": true,
+    "enable_photo_pose_analysis": true,
+    "enable_autofill_prompt": true,
+    "enable_seed_lock": true,
+    "enable_background_replacement": true,
+    "enable_style_enforcement": true,
+    "require_face_analysis": true
+  },
+  "default_seed": 1390291093,
+  "default_style": "梁寧莉寫實自拍風格",
+  "default_background": "台灣真實街景，有中文招牌"
+}

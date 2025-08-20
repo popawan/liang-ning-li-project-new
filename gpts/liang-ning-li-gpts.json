@@ -1,0 +1,9 @@
+{
+  "project_name": "梁寧莉 GPTs 專案",
+  "language": "zh-TW",
+  "default_gpts": "gpts/liang-ning-li-gpts.json",
+  "persona_lock": true,
+  "style_source": "docs/ningli-style-note.yaml",
+  "prompt_presets": "prompts/",
+  "seed": 20250820
+}

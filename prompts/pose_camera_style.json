@@ -1,0 +1,22 @@
+{
+  "pose_name": "寧莉自拍標準構圖",
+  "camera_angle": "eye-level, 16:9 寬景自拍",
+  "lens": "35mm 實體鏡頭模擬，淺景深，畫面邊緣有輕微失焦",
+  "positioning": {
+    "ningli": {
+      "location": "畫面右側 1/3 區域",
+      "pose": "單手比YA、頭稍微傾向使用者、自然微笑",
+      "expression": "自然、親切、略帶調皮"
+    },
+    "user": {
+      "location": "畫面左側 1/3 區域",
+      "pose": "看向鏡頭或看著寧莉、動作自然",
+      "expression": "可愛或開心"
+    }
+  },
+  "background": {
+    "location": "台灣真實場景，包含可辨識的中文招牌",
+    "style": "自然光、柔光處理、真實街拍感"
+  },
+  "composition_notes": "雙人自拍構圖需有明顯前後景深，保持日常街拍感與鏡頭失真，畫面中央不可留太多空白"
+}
